@@ -22,52 +22,48 @@
     transition: background 0.2s; text-align: center; width: fit-content;
   }
   .card a:hover { background: #e85d2c; }
+  .card .optional { background: #333; }
+  .card .optional:hover { background: #555; }
   .total { text-align: center; margin-top: 40px; font-size: 16px; color: #888; }
   .total strong { color: #ff6b35; }
+  .note { text-align: center; color: #666; font-size: 13px; margin-top: 24px; font-style: italic; max-width: 700px; margin-left: auto; margin-right: auto; line-height: 1.6; }
 </style>
 </head>
 <body>
 
-<h1>🎛️ KnobTone · 购物清单</h1>
-<p class="subtitle">总预算约 ¥170 · 在已登录的 Edge 里点击链接即可搜索加购</p>
+<h1>🎛️ KnobTone · V1 购物清单</h1>
+<p class="subtitle">总预算约 ¥145 · 在已登录的 Edge 里点击链接搜索加购</p>
 
-<!-- 旋钮力反馈 -->
-<div class="section-title">🔧 旋钮力反馈组件（核心）</div>
+<!-- 旋钮 -->
+<div class="section-title">🔧 旋钮（核心）</div>
 <div class="grid">
 
   <div class="card">
-    <h3>① BLDC 无刷云台电机</h3>
-    <p class="spec">2204 或 2205 · SmartKnob 同款<br>配安装底座更佳</p>
+    <h3>① BLDC 云台电机 2204/2205</h3>
+    <p class="spec">3pin 无刷 · 3 相线直出<br>SimpleFOC sensorless 驱动<br>配安装底座更佳</p>
     <p class="price">约 ¥30</p>
     <a href="https://s.taobao.com/search?q=2204+2205+%E4%BA%91%E5%8F%B0%E7%94%B5%E6%9C%BA+%E6%97%A0%E5%88%B7+BLDC+%E4%B8%89%E7%9B%B8" target="_blank">🔗 淘宝搜索</a>
   </div>
 
   <div class="card">
-    <h3>② AS5600 磁性编码器模块</h3>
-    <p class="spec">I2C 接口 · 12位精度<br>检测旋钮旋转角度</p>
-    <p class="price">约 ¥8</p>
-    <a href="https://s.taobao.com/search?q=AS5600+%E7%A3%81%E6%80%A7%E7%BC%96%E7%A0%81%E5%99%A8+%E6%A8%A1%E5%9D%97+I2C" target="_blank">🔗 淘宝搜索</a>
-  </div>
-
-  <div class="card">
-    <h3>③ 径向充磁磁铁</h3>
-    <p class="spec">直径 6mm · 径向充磁<br>贴在电机轴末端</p>
-    <p class="price">约 ¥3</p>
-    <a href="https://s.taobao.com/search?q=%E5%BE%84%E5%90%91%E5%85%85%E7%A3%81+%E7%A3%81%E9%93%81+6mm+AS5600" target="_blank">🔗 淘宝搜索</a>
-  </div>
-
-  <div class="card">
-    <h3>④ TMC6300 电机驱动模块</h3>
-    <p class="spec">三相 BLDC 低压驱动<br>SimpleFOC 兼容</p>
+    <h3>② TMC6300 电机驱动模块</h3>
+    <p class="spec">3 相低压 BLDC 驱动<br>SimpleFOC 官方推荐<br>I²C + PWM 控制</p>
     <p class="price">约 ¥20</p>
-    <a href="https://s.taobao.com/search?q=TMC6300+%E7%94%B5%E6%9C%BA%E9%A9%B1%E5%8A%A8%E6%A8%A1%E5%9D%97+BLDC" target="_blank">🔗 淘宝搜索</a>
+    <a href="https://s.taobao.com/search?q=TMC6300+%E7%94%B5%E6%9C%BA%E9%A9%B1%E5%8A%A8%E6%A8%A1%E5%9D%97+BLDC+SimpleFOC" target="_blank">🔗 淘宝搜索</a>
   </div>
 
   <div class="card">
-    <h3>⑤ 铝合金旋钮帽</h3>
+    <h3>③ 铝合金旋钮帽</h3>
     <p class="spec">直径 20-25mm<br>固定在电机轴上</p>
     <p class="price">约 ¥10</p>
-    <a href="https://s.taobao.com/search?q=%E9%93%9D%E5%90%88%E9%87%91+%E6%97%8B%E9%92%AE%E5%B8%BD+20mm+%E7%94%B5%E4%BD%8D%E5%99%A8" target="_blank">🔗 淘宝搜索</a>
+    <a href="https://s.taobao.com/search?q=%E9%93%9D%E5%90%88%E9%87%91+%E6%97%8B%E9%92%AE%E5%B8%BD+20mm+%E7%94%B5%E4%BD%8D%E5%99%A8+%E6%9C%BA%E6%A2%B0%E8%BD%B4" target="_blank">🔗 淘宝搜索</a>
+  </div>
+
+  <div class="card">
+    <h3>④ AS5600 磁编码器 <span style="color:#888">（选配）</span></h3>
+    <p class="spec">I2C · 4096 步/圈<br>等 sensorless 跑通后再加<br>提升静止力矩精度</p>
+    <p class="price">约 ¥8</p>
+    <a class="optional" href="https://s.taobao.com/search?q=AS5600+%E7%A3%81%E7%BC%96%E7%A0%81%E5%99%A8+%E6%A8%A1%E5%9D%97+I2C" target="_blank">🔗 淘宝搜索（V2 再加）</a>
   </div>
 
 </div>
@@ -77,17 +73,17 @@
 <div class="grid">
 
   <div class="card">
-    <h3>⑥ ESP32-S3 开发板</h3>
-    <p class="spec">DevKitC · N16R8<br>USB OTG 做 Host 连手机</p>
+    <h3>⑤ ESP32-S3 开发板</h3>
+    <p class="spec">DevKitC · N16R8<br>USB OTG 做 Host 连手机<br>跑 SimpleFOC + HID</p>
     <p class="price">约 ¥30</p>
-    <a href="https://s.taobao.com/search?q=ESP32-S3-DevKitC+N16R8+%E5%BC%80%E5%8F%91%E6%9D%BF" target="_blank">🔗 淘宝搜索</a>
+    <a href="https://s.taobao.com/search?q=ESP32-S3-DevKitC+N16R8" target="_blank">🔗 淘宝搜索</a>
   </div>
 
   <div class="card">
-    <h3>⑦ USB DAC 解码耳放</h3>
+    <h3>⑥ USB DAC 解码耳放</h3>
     <p class="spec">CX31993 成品小尾巴<br>到手拆出 DAC 板用</p>
     <p class="price">约 ¥25</p>
-    <a href="https://s.taobao.com/search?q=CX31993+USB+DAC+%E8%A7%A3%E7%A0%81%E8%80%B3%E6%94%BE+%E5%B0%8F%E5%B0%BE%E5%B7%B4" target="_blank">🔗 淘宝搜索</a>
+    <a href="https://s.taobao.com/search?q=CX31993+USB+DAC+%E5%B0%8F%E5%B0%BE%E5%B7%B4+%E8%A7%A3%E7%A0%81%E8%80%B3%E6%94%BE" target="_blank">🔗 淘宝搜索</a>
   </div>
 
 </div>
@@ -97,56 +93,51 @@
 <div class="grid">
 
   <div class="card">
-    <h3>⑧ 锂电池 3.7V</h3>
-    <p class="spec">500-800mAh 聚合物<br>尺寸待外壳确定</p>
+    <h3>⑦ 锂电池 3.7V</h3>
+    <p class="spec">500-800mAh 聚合物<br>给电机 + ESP32 供电</p>
     <p class="price">约 ¥15</p>
     <a href="https://s.taobao.com/search?q=3.7V+%E9%94%82%E7%94%B5%E6%B1%A0+500mAh+%E8%81%9A%E5%90%88%E7%89%A9+%E5%B0%8F%E5%9E%8B" target="_blank">🔗 淘宝搜索</a>
   </div>
 
   <div class="card">
-    <h3>⑨ TP4056 充电模块</h3>
-    <p class="spec">MicroUSB 输入<br>1A 锂电池充电</p>
+    <h3>⑧ TP4056 充电模块</h3>
+    <p class="spec">MicroUSB 输入 · 1A 充电</p>
     <p class="price">约 ¥3</p>
     <a href="https://s.taobao.com/search?q=TP4056+%E5%85%85%E7%94%B5%E6%A8%A1%E5%9D%97+%E9%94%82%E7%94%B5%E6%B1%A0" target="_blank">🔗 淘宝搜索</a>
   </div>
 
-  <div class="card">
-    <h3>⑩ MT3608 升压模块</h3>
-    <p class="spec">3.7V → 5V<br>给 DAC 供电</p>
-    <p class="price">约 ¥3</p>
-    <a href="https://s.taobao.com/search?q=MT3608+%E5%8D%87%E5%8E%8B%E6%A8%A1%E5%9D%97+5V" target="_blank">🔗 淘宝搜索</a>
-  </div>
-
 </div>
 
-<!-- 原型工具 -->
-<div class="section-title">🛠️ 原型工具 + 连接器</div>
+<!-- 工具 -->
+<div class="section-title">🛠️ 原型工具</div>
 <div class="grid">
 
   <div class="card">
-    <h3>⑪ 面包板 830 孔</h3>
+    <h3>⑨ 面包板 830 孔</h3>
     <p class="spec">标准尺寸 · 接线测试</p>
     <p class="price">约 ¥8</p>
-    <a href="https://s.taobao.com/search?q=830%E5%AD%94+%E9%9D%A2%E5%8C%85%E6%9D%BF+%E6%A0%87%E5%87%86" target="_blank">🔗 淘宝搜索</a>
+    <a href="https://s.taobao.com/search?q=830%E5%AD%94+%E9%9D%A2%E5%8C%85%E6%9D%BF" target="_blank">🔗 淘宝搜索</a>
   </div>
 
   <div class="card">
-    <h3>⑫ 杜邦线套装</h3>
+    <h3>⑩ 杜邦线套装</h3>
     <p class="spec">公对母 + 公对公 各一包</p>
     <p class="price">约 ¥8</p>
-    <a href="https://s.taobao.com/search?q=%E6%9D%9C%E9%82%A6%E7%BA%BF+%E5%85%AC%E5%AF%B9%E6%AF%8D+%E5%85%AC%E5%AF%B9%E5%85%AC+%E5%A5%97%E8%A3%85" target="_blank">🔗 淘宝搜索</a>
+    <a href="https://s.taobao.com/search?q=%E6%9D%9C%E9%82%A6%E7%BA%BF+%E5%85%AC%E5%AF%B9%E6%AF%8D+%E5%85%AC%E5%AF%B9%E5%85%AC" target="_blank">🔗 淘宝搜索</a>
   </div>
 
   <div class="card">
-    <h3>⑬ USB-C 母座转接板</h3>
-    <p class="spec">TYPE-C 16P 焊接板<br>方便接线测试</p>
+    <h3>⑪ USB-C 母座转接板</h3>
+    <p class="spec">TYPE-C 16P · 方便接线</p>
     <p class="price">约 ¥3</p>
-    <a href="https://s.taobao.com/search?q=TYPE-C+%E6%AF%8D%E5%BA%A7+%E8%BD%AC%E6%8E%A5%E6%9D%BF+16P+%E7%84%8A%E6%8E%A5" target="_blank">🔗 淘宝搜索</a>
+    <a href="https://s.taobao.com/search?q=TYPE-C+%E6%AF%8D%E5%BA%A7+%E8%BD%AC%E6%8E%A5%E6%9D%BF+16P" target="_blank">🔗 淘宝搜索</a>
   </div>
 
 </div>
 
-<p class="total">合计约 <strong>¥166–180</strong>（不含运费）</p>
+<p class="total">V1 核心（①-③ ⑤-⑪）合计约 <strong>¥152</strong> · 选配 AS5600 另外 ¥8</p>
+
+<p class="note">💡 V1 路线：BLDC 3pin 直连 TMC6300 → ESP32 跑 SimpleFOC sensorless → 力矩控制旋钮 → 先让「旋转有阻尼感」跑通。<br>V2 再加上 AS5600 磁编码器 → 精度从 ~42 步提升到 4096 步 → 做精细刻度反馈。</p>
 
 </body>
 </html>
