@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KnobTone 购物清单</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #0f0f0f; color: #e0e0e0; padding: 40px 20px; }
+  h1 { text-align: center; font-size: 28px; margin-bottom: 8px; }
+  .subtitle { text-align: center; color: #888; margin-bottom: 40px; font-size: 14px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 20px; max-width: 1100px; margin: 0 auto; }
+  .card { background: #1a1a1a; border: 1px solid #2a2a2a; border-radius: 12px; padding: 24px; transition: border-color 0.2s; }
+  .card:hover { border-color: #ff6b35; }
+  .card h3 { font-size: 18px; margin-bottom: 6px; }
+  .card .name { color: #aaa; font-size: 13px; margin-bottom: 12px; }
+  .card .price { color: #ff6b35; font-size: 15px; font-weight: 600; margin-bottom: 16px; }
+  .card a {
+    display: inline-block; background: #ff6b35; color: #fff; text-decoration: none;
+    padding: 10px 24px; border-radius: 8px; font-size: 14px; font-weight: 500;
+    transition: background 0.2s;
+  }
+  .card a:hover { background: #e85d2c; }
+  .total { text-align: center; margin-top: 40px; font-size: 16px; color: #888; }
+  .total strong { color: #ff6b35; }
+</style>
+</head>
+<body>
+
+<h1>🎛️ KnobTone · Phase 1 购物清单</h1>
+<p class="subtitle">总预算约 ¥150 · 点击链接在淘宝打开 · 加完一个返回继续</p>
+
+<div class="grid">
+
+  <div class="card">
+    <h3>① ESP32-S3 开发板</h3>
+    <p class="name">ESP32-S3-DevKitC / WROOM-1 N16R8</p>
+    <p class="price">约 ¥25–35</p>
+    <a href="https://s.taobao.com/search?q=ESP32-S3+DevKitC+%E5%BC%80%E5%8F%91%E6%9D%BF+N16R8" target="_blank">🔗 淘宝搜索</a>
+  </div>
+
+  <div class="card">
+    <h3>② KY-040 旋转编码器模块</h3>
+    <p class="name">带按压功能 · Phase 1 替代旋钮</p>
+    <p class="price">约 ¥3–5</p>
+    <a href="https://s.taobao.com/search?q=KY-040+%E6%97%8B%E8%BD%AC%E7%BC%96%E7%A0%81%E5%99%A8%E6%A8%A1%E5%9D%97+%E5%B8%A6%E6%8C%89%E5%8E%8B" target="_blank">🔗 淘宝搜索</a>
+  </div>
+
+  <div class="card">
+    <h3>③ USB DAC 解码耳放（小尾巴）</h3>
+    <p class="name">CX31993 成品 · 到手拆板用</p>
+    <p class="price">约 ¥20–30</p>
+    <a href="https://s.taobao.com/search?q=CX31993+USB+DAC+%E8%A7%A3%E7%A0%81%E8%80%B3%E6%94%BE+%E5%B0%8F%E5%B0%BE%E5%B7%B4" target="_blank">🔗 淘宝搜索</a>
+  </div>
+
+  <div class="card">
+    <h3>④ 面包板 830 孔</h3>
+    <p class="name">标准尺寸 · 接线测试用</p>
+    <p class="price">约 ¥5–8</p>
+    <a href="https://s.taobao.com/search?q=830%E5%AD%94+%E9%9D%A2%E5%8C%85%E6%9D%BF+%E6%A0%87%E5%87%86" target="_blank">🔗 淘宝搜索</a>
+  </div>
+
+  <div class="card">
+    <h3>⑤ 杜邦线套装</h3>
+    <p class="name">公对母 + 公对公 · 各一包</p>
+    <p class="price">约 ¥5–8</p>
+    <a href="https://s.taobao.com/search?q=%E6%9D%9C%E9%82%A6%E7%BA%BF+%E5%85%AC%E5%AF%B9%E6%AF%8D+%E5%85%AC%E5%AF%B9%E5%85%AC+%E9%9D%A2%E5%8C%85%E6%9D%BF+%E5%A5%97%E8%A3%85" target="_blank">🔗 淘宝搜索</a>
+  </div>
+
+  <div class="card">
+    <h3>⑥ USB-C 母座转接板</h3>
+    <p class="name">TYPE-C 母座焊接板 · 方便接线</p>
+    <p class="price">约 ¥2–5</p>
+    <a href="https://s.taobao.com/search?q=TYPE-C+%E6%AF%8D%E5%BA%A7+%E8%BD%AC%E6%8E%A5%E6%9D%BF+%E7%84%8A%E6%8E%A5+%E5%B0%8F%E6%9D%BF" target="_blank">🔗 淘宝搜索</a>
+  </div>
+
+</div>
+
+<p class="total">Phase 1 合计约 <strong>¥60–91</strong>（不含运费）</p>
+
+</body>
+</html>
